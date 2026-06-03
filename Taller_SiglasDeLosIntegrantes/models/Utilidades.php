@@ -26,6 +26,12 @@ class Utilidades {
         return in_array($valor, $listaPermitida);
     }
 
+    // Calcula la raíz cuadrada de un número (para desviación estándar)
+    public static function calcularRaiz($valor) {
+        if ($valor < 0) return 0;
+        return sqrt($valor);
+    }
+
     // Genera el botón unificado para regresar de forma segura al panel principal
     public static function generarEnlaceMenu() {
         return "<br><br><a href='index.php?action=menu' class='btn-regresar'>← Volver al Menú Principal</a>";

@@ -54,7 +54,7 @@ class ProblemController {
         for ($i = 1; $i <= $n; $i++) {
             $multiplos[] = 4 * $i;
         }
-        return ["multiplos" => $multiplos];
+        return ["n" => $n, "multiplos" => $multiplos];
     }
 
     // Problema 5: Edades de 5 personas con categorías y estadísticas
@@ -102,25 +102,28 @@ class ProblemController {
         return compact('media', 'desviacion', 'min', 'max', 'notas');
     }
 
-    // Problema 8: Estación del Año dada una fecha (Formato MM-DD o YYYY-MM-DD)
+    // Problema 8: Estación del Año dada una fecha (Formato YYYY-MM-DD)
     public static function resolverProblema8($fechaInput) {
         $timestamp = strtotime($fechaInput);
         $mes = (int)date('m', $timestamp);
         $dia = (int)date('d', $timestamp);
+        $fechaFormato = date('d/m', $timestamp);
         
-        // Conversión a valor numérico comparable para el año (Més * 100 + Día)
+        // Conversión a valor numérico comparable (Mes * 100 + Día)
         $valor = ($mes * 100) + $dia;
 
         // Estaciones según tabla proporcionada
         if ($valor >= 1221 || $valor <= 320) {
-            return "Verano";
+            $estacion = "Verano";
         } elseif ($valor >= 321 && $valor <= 621) {
-            return "Otoño";
+            $estacion = "Otoño";
         } elseif ($valor >= 622 && $valor <= 922) {
-            return "Invierno";
+            $estacion = "Invierno";
         } else {
-            return "Primavera";
+            $estacion = "Primavera";
         }
+        
+        return ["fecha" => $fechaFormato, "estacion" => $estacion];
     }
 
     // Problema 9: 15 primeras potencias de un número (1 al 9)

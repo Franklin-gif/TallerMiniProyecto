@@ -74,7 +74,7 @@ if (isset($resultado['error'])) {
                     data: {
                         labels: ['Ginecología (40%)', 'Traumatología (35%)', 'Pediatría (25%)'],
                         datasets: [{
-                            data: [<?php echo $resultado['Ginecología (40%)'] . "," . $resultado['Traumatología (35%)'] . "," . $resultado['Pediatría (25%)']; ?>],
+                            data: [<?php echo $resultado['Ginecología'] . "," . $resultado['Traumatología'] . "," . $resultado['Pediatría']; ?>],
                             backgroundColor: ['#e74c3c', '#3498db', '#2ecc71']
                         }]
                     }

@@ -3,8 +3,8 @@
 
 <form action="index.php?action=p6" method="POST">
     <div class="form-group">
-        <label for="monto">Monto Total del Presupuesto ($):</label>
-        <input type="number" id="monto" name="monto" min="0.01" step="0.01" required placeholder="Ej. 500000">
+        <label for="presupuesto">Monto Total del Presupuesto ($):</label>
+        <input type="number" id="presupuesto" name="presupuesto" min="0.01" step="0.01" required placeholder="Ej. 500000">
     </div>
     <button type="submit" class="btn-enviar">Calcular Distribución</button>
 </form>
