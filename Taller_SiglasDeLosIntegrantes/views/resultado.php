@@ -95,7 +95,22 @@ if (isset($resultado['error'])) {
             break;
 
         case 'p8':
+            echo "<div class='contenedor-estacion'>";
             echo "<p>Para la fecha indicada (Día/Mes: <strong>" . $resultado['fecha'] . "</strong>), la estación climática correspondiente es: <strong>" . $resultado['estacion'] . "</strong></p>";
+            echo "</div>";
+            
+            // Estilos CSS integrados para que la imagen quede perfecta y centrada
+            echo "<style>
+                .contenedor-estacion img {
+                    display: block;         /* Hace que la imagen baje y no se quede al lado del texto */
+                    max-width: 350px;       /* Limita el ancho para que no se desborde de la tarjeta */
+                    width: 100%;            /* Permite que sea responsiva si la pantalla es pequeña */
+                    height: auto;           /* Mantiene la proporción original sin deformarla */
+                    margin: 20px auto 10px auto; /* Centra la imagen horizontalmente y le da separación */
+                    border-radius: 12px;    /* Le da bordes redondeados estéticos */
+                    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Añade una ligera sombra muy profesional */
+                }
+            </style>";
             break;
 
         case 'p9':

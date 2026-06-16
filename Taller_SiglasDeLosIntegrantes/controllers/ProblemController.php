@@ -112,17 +112,16 @@ class ProblemController {
         // Conversión a valor numérico comparable (Mes * 100 + Día)
         $valor = ($mes * 100) + $dia;
 
-        // Estaciones según tabla proporcionada
-        if ($valor >= 1221 || $valor <= 320) {
-            $estacion = "Verano";
-        } elseif ($valor >= 321 && $valor <= 621) {
-            $estacion = "Otoño";
-        } elseif ($valor >= 622 && $valor <= 922) {
-            $estacion = "Invierno";
-        } else {
-            $estacion = "Primavera";
-        }
-        
+        // Estaciones según tabla proporcionada apuntando a la carpeta img/
+  if ($valor >= 1221 || $valor <= 320) {
+    $estacion = "Verano" . " <img src='../img/verano.jpg' alt='Verano'>";
+} elseif ($valor >= 321 && $valor <= 621) {
+    $estacion = "Otoño" . " <img src='../img/otoño.jpg' alt='Otoño'>";
+} elseif ($valor >= 622 && $valor <= 922) {
+    $estacion = "Invierno" . " <img src='../img/invierno.jpg' alt='Invierno'>";
+} else {
+    $estacion = "Primavera" . " <img src='../img/primavera.jpg' alt='Primavera'>";
+}
         return ["fecha" => $fechaFormato, "estacion" => $estacion];
     }
 

@@ -1,6 +1,6 @@
 <?php // views/menu.php ?>
 <h2>Mini Proyecto #2: Panel de Menú de Problemas</h2>
-<ul>
+<ul class="menu-list">
     <li><a href="index.php?action=p1">Problema 1: Media y Desviación de 5 números</a></li>
     <li><a href="index.php?action=p2">Problema 2: Suma del 1 al 1,000</a></li>
     <li><a href="index.php?action=p3">Problema 3: Suma de pares e impares (1-200)</a></li>
